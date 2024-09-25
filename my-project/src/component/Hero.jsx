@@ -15,7 +15,7 @@ const Hero = () => {
       >
         Welcome To Ofin Finance
       </motion.h1>
-      <h3 className="text-center text-3xl text-amber-100 font-bold font-sans mb-10 ml-10 mr-20 ">A credit score below 600, coupled with a history of late or missed payments on previous loans or credit cards, settlements, or write-offs, will likely result in loan applications being denied.</h3>
+      <h3 className="text-center text-3xl text-amber-100 font-bold font-sans mb-10 ml-20 mr-20 ">A credit score below 600, coupled with a history of late or missed payments on previous loans or credit cards, settlements, or write-offs, will likely result in loan applications being denied.</h3>
       <div className="flex justify-center rounded-lg mb-10 ">
         <img src={bg} alt=""  width={"80%"} height={"30%"} />
       </div>
