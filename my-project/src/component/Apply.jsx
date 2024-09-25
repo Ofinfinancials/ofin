@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 const url = import.meta.env.VITE_API || 'http://localhost:5000';
 
-
-const apply = () => {
+const Apply = () => {
   const [formData, setFormData] = useState({
     email: "",
     loanAmount: "",
@@ -49,151 +48,38 @@ const apply = () => {
   };
 
   return (
-    <div className=" mb-10">
+    <div className="mb-10 px-4 sm:px-6 lg:px-8">
       <div className="text-center font-sans font-bold text-3xl m-20 text-violet-400">
         <h1>APPLY</h1>
       </div>
       <div className="flex justify-center">
-        <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
-          <div>
-            <label
-              for="small-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-          </div>
-
-          <div>
-            <label
-              for="small-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Loan Amount
-            </label>
-            <input
-              type="text"
-              name="loanAmount"
-              value={formData.loanAmount}
-              onChange={handleInputChange}
-              required
-              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-          </div>
-
-          <div className="mb-5">
-            <label
-              for="large-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Address :
-            </label>
-            <input
-              type="textarea"
-              name="address"
-              value={formData.address}
-              onChange={handleInputChange}
-              required
-              className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-          </div>
-
-          <div>
-            <label
-              for="small-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              monthly income
-            </label>
-            <input
-              type="text"
-              name="income"
-              value={formData.income}
-              onChange={handleInputChange}
-              required
-              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-          </div>
-
-          <div>
-            <label
-              for="small-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              first name
-            </label>
-            <input
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleInputChange}
-              required
-              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-          </div>
-
-          <div>
-            <label
-              for="small-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              last name
-            </label>
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleInputChange}
-              required
-              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-          </div>
-
-          <div>
-            <label
-              for="small-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              phone
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-              value={formData.phone}
-              onChange={handleInputChange}
-              required
-              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-          </div>
-
-          <div>
-            <label
-              for="small-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              whatsapp
-            </label>
-            <input
-              type="tel"
-              name="whatsapp"
-              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-              value={formData.whatsapp}
-              onChange={handleInputChange}
-              required
-              className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            />
-          </div>
-
-          <div class="relative z-0 w-full mb-5 group">
+        <form className="max-w-md mx-auto w-full" onSubmit={handleSubmit}>
+          {/* Input Fields */}
+          {[
+            { label: "Email", name: "email", type: "email" },
+            { label: "Loan Amount", name: "loanAmount", type: "text" },
+            { label: "Address", name: "address", type: "textarea" },
+            { label: "Monthly Income", name: "income", type: "text" },
+            { label: "First Name", name: "firstName", type: "text" },
+            { label: "Last Name", name: "lastName", type: "text" },
+            { label: "Phone", name: "phone", type: "tel", pattern: "[0-9]{3}[0-9]{3}[0-9]{4}" },
+            { label: "WhatsApp", name: "whatsapp", type: "tel", pattern: "[0-9]{3}[0-9]{3}[0-9]{4}" },
+          ].map((field) => (
+            <div key={field.name} className="mb-5">
+              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                {field.label}
+              </label>
+              <input
+                type={field.type}
+                name={field.name}
+                value={formData[field.name]}
+                onChange={handleInputChange}
+                required
+                className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+          ))}
+ <div class="relative z-0 w-full mb-5 group">
             <select
               name="maritalStatus"
               value={formData.maritalStatus}
@@ -336,8 +222,7 @@ const apply = () => {
           </div>
           <button
             type="submit"
-            value="Submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Submit
           </button>
@@ -347,4 +232,4 @@ const apply = () => {
   );
 };
 
-export default apply;
+export default Apply;
