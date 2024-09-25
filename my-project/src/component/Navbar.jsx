@@ -17,6 +17,10 @@ const container = (delay) => ({
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <nav className="flex items-center justify-between py-6 bg-transparent border-b border-stone-50 ">
       {/* Logo */}
@@ -61,6 +65,7 @@ const Navbar = () => {
               <Link
                 to="/"
                 className="hover:text-stone-700 transition-colors duration-300"
+                onClick={handleLinkClick} // Close menu on click
               >
                 HOME
               </Link>
@@ -75,6 +80,7 @@ const Navbar = () => {
               <Link
                 to="/loans"
                 className="hover:text-stone-700 transition-colors duration-300"
+                onClick={handleLinkClick} // Close menu on click
               >
                 LOANS
               </Link>
@@ -89,6 +95,7 @@ const Navbar = () => {
               <Link
                 to="/apply"
                 className="hover:text-stone-700 transition-colors duration-300"
+                onClick={handleLinkClick} // Close menu on click
               >
                 APPLY
               </Link>
@@ -103,6 +110,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 className="hover:text-stone-700 transition-colors duration-300"
+                onClick={handleLinkClick} // Close menu on click
               >
                 CONTACT
               </Link>
