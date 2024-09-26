@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "./AuthContext";
 import { useNavigate } from "react-router-dom";
-const url = import.meta.env.VITE_API;
+const url = `${import.meta.env.VITE_API}/admin`
 
 
 
@@ -31,7 +31,7 @@ const Admin = () => {
     setLoading(true); // Start loading
   
     try {
-      const response = await fetch(`${url}/admin`, {
+      const response = await fetch(`${url}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
