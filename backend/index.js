@@ -12,9 +12,7 @@ const { PORT } = require("./config");
 
 // Middleware
 app.use(cors({
-  origin: [
-    'http://localhost:5173', // Allow requests from this origin
-    'http://localhost:3000',  // Allow requests from this origin
+  origin: [  // Allow requests from this origin
     process.env.CLIENT_URL     // Also allow a URL from environment variable
   ].filter(Boolean), // Remove any false values
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
