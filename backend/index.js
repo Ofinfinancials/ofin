@@ -12,10 +12,8 @@ const { PORT } = require("./config");
 
 // Middleware
 app.use(cors({
-  origin: [  // Allow requests from this origin
-    process.env.CLIENT_URL     // Also allow a URL from environment variable
-  ].filter(Boolean), // Remove any false values
-  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  origin: ['https://ofin-binn.vercel.app', process.env.CLIENT_URL],
+  credentials: true,
 }));
 
 app.use(express.json());
