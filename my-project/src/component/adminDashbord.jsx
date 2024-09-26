@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "./AuthContext";
-const url = import.meta.env.VITE_API;
+const url = `${import.meta.env.VITE_API}/admin`
 
 
 
@@ -44,7 +44,7 @@ const AdminDashboard = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${url}/admin/getdata`, {
+      const response = await fetch(`${url}/getdata`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -77,7 +77,7 @@ const AdminDashboard = () => {
 
   const handleDownload = async () => {
     try {
-      const response = await fetch(`${url}/admin/download`, {
+      const response = await fetch(`${url}/download`, {
         method: 'GET',
         credentials: 'include',  // Include credentials if authentication is needed
       });
@@ -103,7 +103,7 @@ const AdminDashboard = () => {
 
   const handleDelete = async (index) => {
     try {
-      const response = await fetch(`${url}/admin/delete/${index}`, {
+      const response = await fetch(`${url}/delete/${index}`, {
         method: "DELETE",
         credentials: "include",
       });
