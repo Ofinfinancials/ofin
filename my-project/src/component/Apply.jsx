@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const url = import.meta.env.VITE_API || 'http://localhost:5000';
+const url = import.meta.env.VITE_API;
 
 const Apply = () => {
   const [formData, setFormData] = useState({
