@@ -12,7 +12,7 @@ const { PORT } = require("./config");
 
 // Middleware
 app.use(cors({
-  origin: ['https://ofin-binn.vercel.app', process.env.CLIENT_URL],
+  origin: ['https://ofin-binn.vercel.app','https://ofin-binn.vercel.app/admin', process.env.CLIENT_URL],
   credentials: true,
 }));
 
